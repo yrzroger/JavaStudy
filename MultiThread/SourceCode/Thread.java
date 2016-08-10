@@ -128,7 +128,7 @@ public class Thread implements Runnable {
     public static final int NORM_PRIORITY = 5;
 
     /* Some of these are accessed directly by the VM; do not rename them. */
-    private volatile long nativePeer;
+    private volatile long nativePeer;	//用于判断当前线程是否处于活动状态
     volatile ThreadGroup group;
     volatile boolean daemon;
     volatile String name;		//the name of Thread 
