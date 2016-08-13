@@ -1,6 +1,5 @@
 package extthread;
 
-import myservice.Main;
 import myservice.Sub;
 
 public class MyThread extends Thread {

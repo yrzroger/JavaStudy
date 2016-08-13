@@ -5,9 +5,9 @@ public class MyThread extends Thread {
 	public void run() {
 		super.run();
 		for (int i = 0; i < 500000; i++) {
-			if (this.interrupted()) {
+			if (Thread.interrupted()) {
 				System.out.println("已经是停止状态了!我要退出了!");
-				break;
+				break;//仅仅跳出了for循环
 			}
 			System.out.println("i=" + (i + 1));
 		}

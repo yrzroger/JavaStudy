@@ -1,7 +1,7 @@
 package extobject;
 
 public class MyObject {
-
+	//同步方法
 	synchronized public void methodA() {
 		try {
 			System.out.println("begin methodA threadName="

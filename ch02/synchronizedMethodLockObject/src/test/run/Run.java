@@ -7,7 +7,7 @@ import extthread.ThreadB;
 public class Run {
 
 	public static void main(String[] args) {
-		MyObject object = new MyObject();
+		MyObject object = new MyObject();//实例化对象
 		ThreadA a = new ThreadA(object);
 		a.setName("A");
 		ThreadB b = new ThreadB(object);

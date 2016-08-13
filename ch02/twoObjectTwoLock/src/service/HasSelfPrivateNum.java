@@ -2,8 +2,8 @@ package service;
 
 public class HasSelfPrivateNum {
 
-	private int num = 0;
-
+	private int num = 0;//私有的数据域
+	//同步方法
 	synchronized public void addI(String username) {
 		try {
 			if (username.equals("a")) {

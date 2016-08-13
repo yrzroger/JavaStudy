@@ -50,7 +50,7 @@ import libcore.util.EmptyArray;
  * You can either subclass {@code Thread} and overriding its {@link #run()} method,
  * or construct a new {@code Thread} and pass a {@link Runnable} to the constructor.
  * In either case, the {@link #start()} method must be called to actually execute
- * the new {@code Thread}.
+ * the new {@code Threa}.
  *
  * <p>Each {@code Thread} has an integer priority that affect how the thread is
  * scheduled by the OS. A new thread inherits the priority of its parent.
@@ -110,14 +110,14 @@ public class Thread implements Runnable {
      * This corresponds to (but does not have the same value as)
      * {@code android.os.Process.THREAD_PRIORITY_URGENT_DISPLAY}.
      */
-    public static final int MAX_PRIORITY = 10;
+    public static final int MAX_PRIORITY = 10;//Java 中线程的最高优先级
 
     /**
      * The minimum priority value allowed for a thread.
      * This corresponds to (but does not have the same value as)
      * {@code android.os.Process.THREAD_PRIORITY_LOWEST}.
      */
-    public static final int MIN_PRIORITY = 1;
+    public static final int MIN_PRIORITY = 1;//Java 中线程的最低优先级
 
     /**
      * The normal (default) priority value assigned to the main thread.
@@ -125,7 +125,7 @@ public class Thread implements Runnable {
      * {@code android.os.Process.THREAD_PRIORITY_DEFAULT}.
 
      */
-    public static final int NORM_PRIORITY = 5;
+    public static final int NORM_PRIORITY = 5;//Java 中线程的默认优先级
 
     /* Some of these are accessed directly by the VM; do not rename them. */
     private volatile long nativePeer;	//用于判断当前线程是否处于活动状态
@@ -632,7 +632,7 @@ public class Thread implements Runnable {
 
     /**
      * Posts an interrupt request to this {@code Thread}. The behavior depends on
-     * the state of this {@code Thread}:
+     * the state of this {@code Thread}:向这个线程发出一个中断请求。行为取决于这个线程的状态：
      * <ul>
      * <li>
      * {@code Thread}s blocked in one of {@code Object}'s {@code wait()} methods

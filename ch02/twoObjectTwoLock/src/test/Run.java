@@ -8,8 +8,8 @@ public class Run {
 
 	public static void main(String[] args) {
 
-		HasSelfPrivateNum numRef1 = new HasSelfPrivateNum();
-		HasSelfPrivateNum numRef2 = new HasSelfPrivateNum();
+		HasSelfPrivateNum numRef1 = new HasSelfPrivateNum();//对象1
+		HasSelfPrivateNum numRef2 = new HasSelfPrivateNum();//对象2
 
 		ThreadA athread = new ThreadA(numRef1);
 		athread.start();

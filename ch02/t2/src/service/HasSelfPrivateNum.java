@@ -2,7 +2,7 @@ package service;
 
 public class HasSelfPrivateNum {
 
-	private int num = 0;
+	private int num = 0;//Êý¾ÝÓò
 
 	synchronized public void addI(String username) {
 		try {
